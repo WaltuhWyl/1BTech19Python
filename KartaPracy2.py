@@ -27,12 +27,43 @@
 
 #Zad 4
 
-waga = int(input())
-LIMIT = 20
-if waga <= LIMIT:
-  print("Jedź ze spokojem")
-else:
-  print("NIE")
+# waga = int(input())
+# LIMIT = 20
+# if waga <= LIMIT:
+#   print("Jedź ze spokojem")
+# else:
+#   print("NIE")
 
 #Zad 5 
 
+#Zad 5 
+# a = int(input())
+# b = int(input())
+# c = int(input())
+
+# if (c>a and c<b) or (c>b and c<a):
+#   print("Tak")
+# else:
+#   print("Nie")
+
+#Zad 6
+
+# a = int(input())
+# p = int(input())
+
+# if (a**p - a) % p == 0:
+#     print("Tak,spełnia MTF")
+# else:
+#     print("Nie, nie spełnia MTF")
+
+#Zad 7
+
+# p = int(input())
+# k = int(input())
+# s = int(input())
+
+
+# if p + 3*s >=k:
+#     print("Tak")
+# else:
+#     print("Nie")
