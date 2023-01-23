@@ -21,4 +21,4 @@ print(L.count(max(L)), "(3. Podaj ile razy występuje najwieksza liczba w tablic
 print(L.count(min(L)), "(4. Podaj ile razy występuje najmniejsza liczba w tablicy", "\n")
 print(max(L)-min(L), "(5. Podaj rozpiętość tablicy (różnica max - min)", "\n")
 print(sum(L), "(6. Podaj sumę liczb w tablicy", "\n")
-print((sum(L)/20), "(7. Podaj średnią wartość liczb w tablicy (bład z zaokrągleniem)", "\n")
+print((sum(L)/20), "lub", (round(sum(L)/20)), "(7. Podaj średnią wartość liczb w tablicy", "\n")
