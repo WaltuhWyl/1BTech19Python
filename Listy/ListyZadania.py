@@ -9,6 +9,7 @@
 # (8. Których liczb jest więcej w tablicy: parzystych czy nieparzystych?
 # (9. Ile w tablicy jest liczb pierwszych?
 # (10. Podaj v-ce max i v-ce min liczb tablicy
+
 zdanie = "Zadania z tablic (list)"
 print(zdanie.center(100))
 
