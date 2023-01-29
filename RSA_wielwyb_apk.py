@@ -7,42 +7,94 @@ while True:
   print(" ")
   if wybór in ('1', '2'):
     if wybór == '1':
-
+  
       from math import gcd as NWD
-
-      pie1 = 97
-      pie2 = 101
-      print("Liczby pierwsze:", pie1, pie2)
-
-      F = (pie1 - 1) * (pie2 - 1)
-      N = pie1 * pie2
-      print("Euler:", F)
-      print("n:", N)
-
-      for i in range(2, F):
-          if NWD(i, F) == 1:
-              E = i
-              break
-      print("Klucz publiczny", E, N)
-
-      for i in range(2, N):
-          if (i * E) % F == 1:
-              D = i
-              break
-      print("Klucz prywatny:", D,N)
+      wybór_l_p = input("Masz wybrane liczby pierwsze? (Tak1/Nie2): ")
       print(" ")
+      if wybór_l_p in ('1', '2'):
+        if wybór_l_p == '2':
+          g = int(input("podaj od ilu mam szukać liczb pierwszych: "))
+          h = int(input("podaj do ilu mam szukać liczb pierwszych: "))
+          for i in range(g, h+1):
+            flaga = True;
+            for j in range(2, i):
+              if i % j ==0:
+                flaga = False
+                break
+            if flaga:
+                print(i, end=" ")
+          print(" ")
+          print(" ")
+          pie1 = int(input("Pierwsza liczba pierwsza: "))
+          pie2 = int(input("Druga liczba pierwsza: "))
+          print("Liczby pierwsze:", pie1, pie2)
+
+          F = (pie1 - 1) * (pie2 - 1)
+          N = pie1 * pie2
+          print("Euler:", F)
+          print("n:", N)
+
+          for i in range(2, F):
+              if NWD(i, F) == 1:
+                  E = i
+                  break
+          print("Klucz publiczny", E, N)
+
+          for i in range(2, N):
+              if (i * E) % F == 1:
+                  D = i
+                  break
+          print("Klucz prywatny:", D,N)
+          print(" ")
       
-      msg = input("Podaj słowo do szyfracji: ")
+          msg = input("Podaj słowo do szyfracji: ")
 
-      szyfr = ""
-      for i in msg:
-          szyfr += chr((ord(i) ** E) % N)
-      print("Twój szyfr:", szyfr)
+          szyfr = ""
+          for i in msg:
+              szyfr += chr((ord(i) ** E) % N)
+          print("Twój szyfr:", szyfr)
 
-      jawny = ""
-      for i in szyfr:
-          jawny += chr((ord(i) **D ) % N)
-      print("Twoja deszyfracja:", jawny)
+          jawny = ""
+          for i in szyfr:
+              jawny += chr((ord(i) **D ) % N)
+          print("Twoja deszyfracja:", jawny)
+
+
+        if wybór_l_p == '1':
+          pie1 = int(input("Pierwsza liczba pierwsza: "))
+          pie2 = int(input("Druga liczba pierwsza: "))
+          print("Liczby pierwsze:", pie1, pie2)
+
+          F = (pie1 - 1) * (pie2 - 1)
+          N = pie1 * pie2
+          print("Euler:", F)
+          print("n:", N)
+
+          for i in range(2, F):
+              if NWD(i, F) == 1:
+                  E = i
+                  break
+          print("Klucz publiczny", E, N)
+
+          for i in range(2, N):
+              if (i * E) % F == 1:
+                  D = i
+                  break
+          print("Klucz prywatny:", D,N)
+          print(" ")
+      
+          msg = input("Podaj słowo do szyfracji: ")
+
+          szyfr = ""
+          for i in msg:
+              szyfr += chr((ord(i) ** E) % N)
+          print("Twój szyfr:", szyfr)
+
+          jawny = ""
+          for i in szyfr:
+              jawny += chr((ord(i) **D ) % N)
+          print("Twoja deszyfracja:", jawny)
+      
 
     elif wybór == '2':
     
