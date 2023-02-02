@@ -26,7 +26,15 @@ while True:
           print(" ")
           print(" ")
           pie1 = int(input("Pierwsza liczba pierwsza: "))
+          for piei in range(2, pie1):
+            if pie1 % piei == 0:
+              print("Liczba nie jest pierwsza")
+              exit(0)
           pie2 = int(input("Druga liczba pierwsza: "))
+          for piej in range(2, pie2):
+            if pie2 % piej == 0:
+              print("Liczba nie jest pierwsza")
+              exit(0)
           print("Liczby pierwsze:", pie1, pie2)
 
           F = (pie1 - 1) * (pie2 - 1)
@@ -94,7 +102,9 @@ while True:
           for i in szyfr:
               jawny += chr((ord(i) **D ) % N)
           print("Twoja deszyfracja:", jawny)
-      
+      else:
+        print("Zrobiłeś błąd")
+        exit(0)
 
     elif wybór == '2':
     
