@@ -1,4 +1,5 @@
 ## KALKULATOR https://www.programiz.com/python-programming/examples/calculator
+##NAJGORSZY
 def dodaj(x, y):
     return x + y
 

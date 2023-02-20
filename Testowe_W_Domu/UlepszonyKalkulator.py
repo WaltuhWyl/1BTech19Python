@@ -1,3 +1,5 @@
+#GORSZY OD SKRÓCONY KALKULATOR#
+
 def odej(x, y):
   return(x - y)
 def dziel(x, y):
