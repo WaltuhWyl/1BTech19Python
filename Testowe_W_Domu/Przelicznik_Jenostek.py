@@ -10,7 +10,7 @@ while True:
     wybor_zadania = input("Wybierz: ")
     if wybor_zadania in('1', '2', '3', '4', 'Godziny na minuty', 'godziny na minuty', 'minuty na godziny', 'Minuty na godziny', 'Bity na bajty', 'bity na bajty', 'Bajty na bity', 'bajty na bity'):
         print("\n")
-        if wybor_zadania == '1' or wybor_zadania == 'Godziny na minuty' or wybor_zadania == 'godziny na minuty':
+        if wybor_zadania in ['1', 'Godziny na minuty', 'godziny na minuty']:
             pierwsza_wartosc = float(input("Ilośc godzin: "))
             wynik = int(pierwsza_wartosc * 60)           
             if (pierwsza_wartosc * 60) % 60 != 0:
@@ -18,7 +18,7 @@ while True:
             else:
                 print(f"Ilość minut: {wynik}min", "\n")
 
-        elif wybor_zadania == '2' or wybor_zadania == 'minuty na godziny' or wybor_zadania == 'Minuty na godziny':
+        elif wybor_zadania in ['2', 'minuty na godziny', 'Minuty na godziny']:
             pierwsza_wartosc = float(input("Ilość minut: "))
             wynik = int(pierwsza_wartosc // 60)
             if pierwsza_wartosc % 60 != 0:
@@ -26,7 +26,7 @@ while True:
             else:
                 print(f"Ilość godzin: {wynik}h", "\n")
 
-        elif wybor_zadania == '3' or wybor_zadania == 'Bity na bajty' or wybor_zadania == 'bity na bajty':
+        elif wybor_zadania in ['3', 'Bity na bajty', 'bity na bajty']:
             pierwsza_wartosc = float(input("Ilość bitów: "))
             wynik = int(pierwsza_wartosc * 8)
             if (pierwsza_wartosc * 8) % 8 != 0:
@@ -34,7 +34,7 @@ while True:
             else:
                 print(f"Ilośc bajtów: {wynik}B", "\n")
 
-        elif wybor_zadania == '4' or wybor_zadania == 'Bajty na bity' or wybor_zadania == 'bajty na bity':
+        elif wybor_zadania in ['4','Bajty na bity', 'bajty na bity']:
             pierwsza_wartosc = float(input("Ilość bajtów: "))
             wynik = int(pierwsza_wartosc // 8)           
             if pierwsza_wartosc % 8 != 0:
